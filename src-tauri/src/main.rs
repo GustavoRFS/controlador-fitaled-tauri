@@ -11,11 +11,9 @@ fn set_led_color(r:u8,g:u8,b:u8) {
   println!("I was invoked from JS! {r} {g} {b}");
 }
 
-let mut port:Result;
 
 fn main() {
-  // 
-  serial::open("COM4").unwrap();
+  // serial::open("COM4").unwrap();
   // r#try(port.reconfigure(&|settings| {
   //   r#try(settings.set_baud_rate(serial::Baud9600));
   //   settings.set_char_size(serial::Bits8);

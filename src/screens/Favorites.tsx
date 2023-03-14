@@ -44,11 +44,7 @@ const FavoriteColor = ({
   </Paper>
 );
 
-export const FavoritesScreen = ({
-  screenSelected,
-}: {
-  screenSelected?: boolean;
-}) => {
+export const FavoritesScreen = () => {
   const colors = [
     "#00ffba",
     "#ff00ba",
@@ -82,13 +78,11 @@ export const FavoritesScreen = ({
             onRemove={() => window.alert("kkkk")}
           />
         ))}
-        <Zoom in={screenSelected} timeout={200} unmountOnExit>
-          <div className="absolute bottom-8 right-5">
-            <Fab onClick={switchRemovingColors}>
-              <Icon>{isRemovingColors ? "done" : "delete"}</Icon>
-            </Fab>
-          </div>
-        </Zoom>
+        <div className="absolute bottom-8 right-5">
+          <Fab onClick={switchRemovingColors}>
+            <Icon>{isRemovingColors ? "done" : "delete"}</Icon>
+          </Fab>
+        </div>
       </div>
     </ScreenBase>
   );
